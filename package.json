@@ -1,0 +1,23 @@
+{
+  "name": "ai-notepadd",
+  "version": "1.0.0",
+  "description": "A notepadd app where we can Use AI to write our things",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Tahmied Hossain",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prettier": "^3.5.3"
+  }
+}
