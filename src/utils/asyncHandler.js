@@ -1,4 +1,4 @@
-export const asyncHandler = (handlerFn) => {
+const asyncHandler = (handlerFn) => {
     return async (req, res,next) => {
         try {
             await handlerFn(req,res,next)
@@ -8,3 +8,5 @@ export const asyncHandler = (handlerFn) => {
     }
 }
 
+
+export { asyncHandler }
