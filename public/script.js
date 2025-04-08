@@ -3,6 +3,7 @@ document.querySelector('.registration-form').addEventListener('submit' , async (
     const userName = document.querySelector('#username').value
     const email = document.querySelector('#email').value
     const password = document.querySelector('#password').value
+    const successMsg = document.querySelector('.success-msg')
 
     if ([userName, email, password].some(e => !e)) {
         prompt('all fields are required')
@@ -20,7 +21,7 @@ document.querySelector('.registration-form').addEventListener('submit' , async (
             console.log('unable to send request')
         }
         console.log(data);
-         
+        successMsg.style.display = 'block'
     } catch (err) {
         console.log(err)
     }

@@ -6,7 +6,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        body {
+        .registration-container {
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -137,4 +137,23 @@
             color: #FF6500;
         }
 
- 
+ .success-msg {
+    height: 30px;
+    width: 300px;
+    background-color: #ff5500;
+    width: fit-content;
+    position: absolute;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    left: 40%;
+    top: 1%;
+    display: none;
+ }
+
+ .success-msg > p {
+    color: white;
+    font-size: 1.5em;
+ }
