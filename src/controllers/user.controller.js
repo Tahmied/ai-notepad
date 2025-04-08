@@ -1,5 +1,5 @@
-import { ApiResponse } from "../utils/apiResponse";
-import { asyncHandler } from "../utils/asyncHandler";
+import { ApiResponse } from "../utils/apiResponse.js";
+import { asyncHandler } from "../utils/asyncHandler.js";
 
 const registerUser = asyncHandler( (req,res)=> {
     res.json(
@@ -8,3 +8,4 @@ const registerUser = asyncHandler( (req,res)=> {
 } )
 
 export { registerUser };
+
