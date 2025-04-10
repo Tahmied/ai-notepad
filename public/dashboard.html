@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Notepad</title>
+    <link rel="stylesheet" href="dashboard-style.css">
+</head>
+<body>
+    <!-- Folders Sidebar -->
+    <div class="sidebar">
+        <div class="folders-header">
+            <h2>Folders</h2>
+            <button class="new-folder-btn">New</button>
+        </div>
+        <ul class="folder-list">
+            <li class="folder-item active">
+                All Notes
+                <span class="note-count">24</span>
+            </li>
+            
+        </ul>
+    </div>
+
+    <!-- Notes List -->
+    <div class="notes-list">
+        <div class="notes-header">
+            <button class="new-note-btn">New Note</button>
+        </div>
+        <div class="note-item active">
+            <div class="note-title">Meeting Notes</div>
+            <div class="note-preview">Discussed Q4 goals and marketing strategy for new product launch...</div>
+            <div class="note-date">Today 10:30 AM</div>
+        </div>
+    </div>
+
+    <!-- Note Editor -->
+    <div class="note-editor">
+        <input type="text" class="note-title-input" placeholder="Note Title" value="Meeting Notes">
+        <textarea class="note-content" placeholder="Start typing...">
+Discussed Q4 goals and marketing strategy for new product launch. Key points:
+- Increase social media presence
+- Budget allocation for influencer marketing
+- Timeline adjustments needed
+- Team assignments...</textarea>
+    </div>
+
+    <script src="dashboard-script.js"></script>
+
+</body>
+</html>
