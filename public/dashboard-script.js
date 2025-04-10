@@ -1,83 +1,11 @@
-const savedData = {
-    "folders": [
-      {
-        "id": "folder-1",
-        "name": "Work",
-        "notes": [
-          {
-            "id": "note-1",
-            "title": "Meeting Notes",
-            "lastModified": "2025-04-09T10:00:00Z",
-            "blocks": [ [
-                {
-                  "id": "block-1",
-                  "type": "heading",
-                  "level": 2,
-                  "content": "My Awesome Page"
-                },
-                {
-                  "id": "block-2",
-                  "type": "paragraph",
-                  "content": "This is a paragraph with some text."
-                },
-                {
-                  "id": "block-3",
-                  "type": "list",
-                  "style": "bullet",
-                  "items": [
-                    "First item",
-                    "Second item",
-                    "Third item"
-                  ]
-                },
-                {
-                  "id": "block-4",
-                  "type": "todo",
-                  "items": [
-                    { "text": "Do laundry", "checked": false },
-                    { "text": "Write blog", "checked": true }
-                  ]
-                },
-                {
-                  "id": "block-5",
-                  "type": "quote",
-                  "content": "Creativity is intelligence having fun. - Albert Einstein"
-                }
-              ]
-            ]
-          },
-          {
-            "id": "note-2",
-            "title": "Project Plan",
-            "lastModified": "2025-04-08T15:00:00Z",
-            "blocks": [ /* ... */ ]
-          }
-        ]
-      },
-      {
-        "id": "folder-2",
-        "name": "Personal",
-        "notes": [
-          {
-            "id": "note-3",
-            "title": "Shopping List",
-            "lastModified": "2025-04-07T08:30:00Z",
-            "blocks": [ /* ... */ ]
-          }
-        ]
-      }
-    ]
-  }
-  
-  // render the folders
-  // render the note list
-  // render the note editor
-
-  // rendering the folder
-  // get the folder name lists from the save data object > folders array
-  // create list item for each folder name and append to the parent ul in html
-
-
+document.addEventListener('DOMContentLoaded' , async function(){
+    const response = await fetch('/savedData.json')
+    if(!response.ok){
+      console.log(`unable to get the data`);
+    }
+    const savedData = await response.json()
+    console.log(savedData)
+    
   // render the folder list
   savedData.folders.forEach((e)=>{
     const folderList = document.querySelector('.folder-list')
@@ -95,21 +23,14 @@ const savedData = {
     folderList.append(folderLi)
   })
 
-  // render the note list
-  function rendferNoteList(e){
-    const noteList = document.querySelector('note-list')
-
-    // find which folder is clicked
-    // find its position in the folders array
-    // access the folder object and then access the notes
-    // display the notes and create the dom elements
-    console.log(this.innerText)
-  }
-
+  // render the notelist 
   document.querySelector('.folder-list').addEventListener('click' , function renderNoteList(e){
 
     const noteList = document.querySelector('.notes-list')
-    noteList.querySelector('.note-item').remove()
+    const presentNoteItems = noteList.querySelectorAll('.note-item')
+    presentNoteItems.forEach((e)=>{
+      e.remove()
+    })
 
     const folderItem = e.target.closest('.folder-item').id
     savedData.folders.forEach((e)=> {
@@ -141,6 +62,5 @@ const savedData = {
     })
    
   })
-  
-
+})
   
