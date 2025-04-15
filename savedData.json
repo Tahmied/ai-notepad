@@ -62,7 +62,28 @@
             "id": "note-3",
             "title": "Shopping List",
             "lastModified": "2025-04-07T08:30:00Z",
-            "blocks": []
+            "blocks": [
+                       { "id": "block-1", "type": "heading", "level": 2, "content": "My Awesome Page" },
+                       { "id": "block-2", "type": "paragraph", "content": "This is a paragraph with some text." },
+                       {
+                         "id": "block-3",
+                         "type": "list",
+                         "style": "bullet",
+                         "items": ["First item", "Second item", "Third item"]
+                       },
+                       {
+                         "id": "block-4",
+                         "type": "todo",
+                         "items": [
+                           { "text": "Do laundry", "checked": false },
+                           { "text": "Write blog", "checked": true }
+                         ]
+                       },
+                       {
+                         "id": "block-5",
+                         "type": "quote",
+                         "content": "Creativity is intelligence having fun. - Albert Einstein"
+                       }]                     
           }
         ]
       }
